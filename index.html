@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube clone</title>
+
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <aside>
+    <div class="bars">
+        <img src="./bars.PNG" alt="bars">
+    </div>
+    <div class="side-icons">
+        <i>
+            <img src="./home.PNG" alt="home" style="width: 45px;">
+        </i>
+        <p>Home</p>
+    </div>
+    <div class="side-icons">
+        <i>
+            <img src="./explore.PNG" alt="Explore" style="width: 45px;">
+        </i>
+        <p>Explore</p>
+    </div>
+    <div class="side-icons">
+        <i>
+            <img src="./Subscription.PNG" alt="Subscriptions" style="width: 45px;">
+        </i>
+        <p>Subscriptions</p>
+    </div>
+    <div class="side-icons">
+        <i>
+            <img src="./you.PNG" alt="You" style="width: 45px;">
+        </i>
+        <p>You</p>
+    </div>
+</aside>
+       <div class="main-container">
+ <header>
+        <nav>
+            <div class="logo">
+                <img src="./Capture.PNG" alt="youtube logo">
+            </div>
+<div class="center-nav">
+<div class="search">
+<input type="text">
+<button>
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAADCCAMAAACYEEwlAAAAeFBMVEX///8AAAD8/Pzp6en5+fnu7u719fVycnL6+vrr6+tRUVHm5uZdXV3V1dWDg4OqqqpoaGhYWFje3t6WlpbKysqdnZ0QEBCmpqYqKirHx8cXFxeOjo5+fn5ubm4cHBy+vr42NjZKSkomJiYyMjI8PDxBQUG1tbUpKSkCiA3hAAAEtElEQVR4nO3ca3eiMBAGYLmLXEWQIihaL/3//3DZlkEQraTnADK+z8ddc04yhDCZQGczAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHhCLozdhxHplhPmXrRaRV4eOoo6dn+GZyZRtjxKZL233TjUx+7VoIJ08SG1HO3YGrtnQ1ETux2A0sYI3mGF0MPHIfiWOezD4Li732MgSfuVMnYv++Wdn4Xgv4Uzdj97NHe7hKDw5Y3d1d4EN6vB7rz0szRNXcNfnG7C4Gpj97YfzrI+yvUyvQRz+j/did1DIwqGOWZf+xI0loMsv00J5sGlMVO2DOeCWb/QvnM3SdbzeqAydgmktbiO7pA//Jkc72vrArPthF57LmS/5sZO7Z5g9ozwNtWCGD25vkpWBeGTVb5gfdG4Nt782Y9rs2YxROeG4l9j0OXn1yhEffdsOHk1qLhbgy39/sTmhtCqLMno2EKpWqRP756JuNCquOhcM0mOzKaCSSvC7nF+cEte0VRY8aguJOs/TG2TbogvFhU3NS2Hsxea2ReaCpe+OjYkjRLhrqviD5WaLXvq16AcuqShWLuI2nHYR1HmcxRsZ1IQui+nr4umdSrYTqWHittLt4ZFF1T4ge+VDe0+ejUs5c+3dlg2PE+/xET7hoVwhSQob6Tj9JPGuAxCJpz5WWW+9Jn00a9BUaoknv5qRpltTz9doidkx010DRVXutUgXhoVy8QvJ+Xbaz5BEB+J6rIJAt0O4oUyvYzfZvprAhUGUvGFsUwZBcoQr4ryPkP8EVme13wI7rxeEOV9J+FkyfksWwZ99GtQOqXNwslvUjY8MDiNoyAI5320mvh99GpgdBK7FWyn0wk1hwMY2jxIgicIVUVq+vunYpGnwQjmPOXOQdr0061h6VQ8t4UqChad2GR9dWxQdD+I7QZp9ym+oL4kh6qMtsA5SkjncEsOxebrRkikpqBV59LT3zj8SOiN9s41Ijmmo7vuZ7gvTqaFXjp1nNthmTFLa/FazKuy6LpKfqcUWKMYSMvpV5orVcIkGR1GZVXv+K45JEpEv76XZzy9yZ3rK48frN7tda4vcNtPdsb5QZIEQjYlXrUsSOdfK0VR86MQXu95r2oj2z760ElNDtINkQzr5cn1Dz52q+DOY0IPs/VtDIoHBKe5oGb1oZ3cS/MSq4GX3f88astpLmjNj392ByNKFFWWZVW38pV9vjMLyihw+jBMjtqXevdxPH4+HH7J5xSFWdjpY7g2m9O6MAvczfMhnxatf2J1RxQPwfYIbxiOcicKnFbH4kF4Od4ZeeUQqtf3M2p4rQuz2fzi7+8Mv9gvnY3yyE3Ztv5zyWsuFM8JZ7W9/Rx0czDi67bCakeBVe74Q3PyyF3uN8Xjcb072WmcBI2Ki9L+uN7nF4ViPqiaZlpBoJia3s6iFf7rQgfanXWBVb7QyZ11gcMrvoIUvxUFRjXHrrRW1jT9l7jEabdzgcfJpCDTaAbhDReFgtKMwjveDgWtkTXxOJ4VZ9bWBdHPZ/gwq+qk8a4ToaBF37utQ/SGWUJNkEdx/hZ/lu1Xb/2nKwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa/gFDYi+cMLfJlAAAAABJRU5ErkJggg==" alt="search" style="width: 30px;height: 30px;">
+
+</button>
+</div>
+<div class="mic">
+    <img src="./mic.PNG" alt="mic">
+</div>
+
+</div>
+<div class="side-nav">
+    <i>
+        <img src="./video.PNG" alt="video add" style="height: 30px;">
+    </i>
+    <i>
+        <img src="./grid.PNG" alt="grid" style="height: 30px;">
+    </i>
+    <i>
+        <img src="./bell.PNG" alt="bell" style="height: 30px;">
+    </i>
+      <i>
+        <img src="data:image/png;base64,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" alt="avator" style="height: 30px;">
+    </i>
+</div>
+        </nav>
+        <div class="tags">
+             <div class="tag dark">All</div>    
+                   <div class="tag light">Maxes</div>    
+                         <div class="tag light">Crypto</div>    
+                               <div class="tag light">HTML</div>    
+                                     <div class="tag light">CSS</div>    
+                                        <div class="tag light">Javascript</div>  
+                                        
+        </div>
+    </header>
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                        
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+              <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                        
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                        
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                    
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                        
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                        
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                    
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                        
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                    
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="/logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                        
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+               <div class="card">
+                <img src="/Build-a-Vehicle-Maintenance-App_-A-Step-by-Step-Guide-1.webp" alt="thumbnail">
+                 <div class="avatar-content">
+                <div class="avatar">
+                    <img src="logo.svg" alt="svg" style="width: 180px;">
+                </div>
+                <div class="content">
+                    <h3></h3>
+                    <p class="channel-name">
+                        
+                    </p>
+                    <div class="content-status">
+                    <p></p>
+                    <p></p>
+                    </div>
+                </div>
+                <div class="dots">
+                    <img src="./dots.png" alt="dots" style="width: 20px;">
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+       </div>
+
+    </div>
+    
+</body>    
+</html>
